@@ -1,3 +1,46 @@
+# Info
+aircrack-ng versi 1.2 RC4, sudah saya patch pada bagian airodump-ng sehingga ada tambahan output hasil scan kedalam format file json.
+
+Penggunaan :
+syntax spesifik output file : sudo airodump-ng --write `<nama file>` --output-format json wlan0
+contoh : airodump-ng --write badai --output-format json wlan0 
+
+atau seluruh format. pcap, ivs, csv, json, gps, kismet, netxml.
+airodump-ng --write badai wlan0 
+.
+Contoh hasil format output json :
+{
+  "StationMAC": "AA:BB:CC:DD:FF:E0",
+  "FirstTimeSeen": "2017-03-02 10:17:36",
+  "LastTimeSeen": "2017-03-02 10:17:36",
+  "Power": -87,
+  "#packets": 1,
+  "BSSID": "(not associated)",
+  "ESSID": "",
+  "ProbedESSIDs": "",
+  "#probes": 0,
+  "wlan_type": "CL",
+  "timestamp": "1488424657"
+},
+{
+  "BSSID": "AA:BB:CC:DD:EE:E0",
+  "FirstTimeSeen": "2017-03-02 10:17:28",
+  "LastTimeSeen": "2017-03-02 10:17:42",
+  "channel": 1,
+  "max_speed": " 54",
+  "Privacy": "OPN",
+  "Cipher": "",
+  "Authentication": "",
+  "Power": -91,
+  "#beacons": 7,
+  "#IV": 5,
+  "LANIP": "  0.  0.  0.  0",
+  "ID-length": 18,
+  "ESSID": "https://komunitaswifiblog.wordpress.com",
+  "wlan_type": "AP",
+  "timestamp": "1488424667"
+}
+
 # Aircrack-ng
 Aircrack-ng is an 802.11 WEP and WPA-PSK keys cracking program that can recover
 keys once enough data packets have been captured. It implements the standard FMS
