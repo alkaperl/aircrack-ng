@@ -3,12 +3,16 @@ aircrack-ng versi 1.2 RC4, sudah saya patch pada bagian airodump-ng sehingga ada
 
 Penggunaan :
 syntax spesifik output file : sudo airodump-ng --write `<nama file>` --output-format json wlan0
+
 contoh : airodump-ng --write badai --output-format json wlan0 
 
-atau seluruh format. pcap, ivs, csv, json, gps, kismet, netxml.
+untuk mendapatkan seluruh format yang ada. pcap, ivs, csv, json, gps, kismet, netxml.
+
 airodump-ng --write badai wlan0 
 .
 Contoh hasil format output json :
+
+```javascript
 {
   "StationMAC": "AA:BB:CC:DD:FF:E0",
   "FirstTimeSeen": "2017-03-02 10:17:36",
@@ -40,6 +44,7 @@ Contoh hasil format output json :
   "wlan_type": "AP",
   "timestamp": "1488424667"
 }
+```
 
 # Aircrack-ng
 Aircrack-ng is an 802.11 WEP and WPA-PSK keys cracking program that can recover
